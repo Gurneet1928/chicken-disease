@@ -11,3 +11,5 @@
 7. Update the pipeline
 8. Update the main.py
 9. Update the dvc.yaml (Only After all the pipeline steps are completed)
+
+To Ignore artifacts file, add the {foler name}/* at the end of ".gitignore" file 
