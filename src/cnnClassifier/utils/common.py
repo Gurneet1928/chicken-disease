@@ -10,6 +10,8 @@ from pathlib import Path
 from typing import Any
 import base64
 
+# ensure_annotations decorator is used to check the type of input arguments and output arguments
+
 @ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:                 # Input Arguments -> Output Argument Type
     """
