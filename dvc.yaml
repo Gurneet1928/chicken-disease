@@ -6,7 +6,7 @@ stages:
       - src/cnnClassifier/config/configuration.py
       - config/config.yaml
     outs:
-      - artifacts/data_ingestion/brain-tumor-dataset
+      - artifacts/data_ingestion/brain_tumor_dataset
 
 
   prepare_base_model:
@@ -31,7 +31,7 @@ stages:
       - src/cnnClassifier/pipeline/stage_03_training.py
       - src/cnnClassifier/components/prepare_callbacks.py
       - config/config.yaml
-      - artifacts/data_ingestion/Chicken-fecal-images
+      - artifacts/data_ingestion/brain_tumor_dataset
       - artifacts/prepare_base_model
     params:
       - IMAGE_SIZE
@@ -39,7 +39,7 @@ stages:
       - BATCH_SIZE
       - AUGMENTATION
     outs:
-      - artifacts/training/model.keras
+      - artifacts/training/trained_model.keras
 
 
   
@@ -49,8 +49,8 @@ stages:
     deps:
       - src/cnnClassifier/pipeline/stage_04_evaluation.py
       - config/config.yaml
-      - artifacts/data_ingestion/Chicken-fecal-images
-      - artifacts/training/model.keras
+      - artifacts/data_ingestion/brain_tumor_dataset
+      - artifacts/training/trained_model.keras
     params:
       - IMAGE_SIZE
       - BATCH_SIZE
