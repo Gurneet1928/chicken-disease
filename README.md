@@ -15,3 +15,6 @@
 To Ignore artifacts file, add the {foler name}/* at the end of ".gitignore" file 
 
 No pipeline required for "prepare Callbacks 03" 
+
+ECR Repo URL:
+905418405560.dkr.ecr.ap-southeast-2.amazonaws.com/chicken
